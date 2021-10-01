@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    background: url(bg.jpeg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.winLogo{
+    opacity: 10000;
+    z-index: 10000;;
+}
+.taskbar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 110;
+    display: flex;
+    justify-content: center;
+    background-color: #f3f3f3;
+}
+.right{
+    position: absolute;
+    right: 0;
+    height: 85%;
+    margin: 6px 0;
+}
+.startmenu{
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -655px;
+    transition: all 0.4s ease-in;
+}
+.startmenu img{
+    border-radius: 20px;
+}
+
+/* For Waving text-'Windows' animation*/
+.wave{
+    /* z-index: 120; */
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent,rgba(0,0,0,0.3));
+}
+.wave img{
+    margin-right: 15px;
+    height: 90px;
+    width: 90px;
+}
+.wave span{
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-size: 5em;
+    font-family: sans-serif;
+    animation:anime 1.5s ease-in-out infinite ;
+    animation-delay: calc(0.1s * var(--v));
+}
+@keyframes anime{
+    0%,100%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+}
